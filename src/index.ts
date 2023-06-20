@@ -15,7 +15,7 @@ const run = () => {
   const account = web3.eth.accounts.privateKeyToAccount(privateKey);
   console.log('Account address:', account.address)
 
-  // Step 2: split private key to 3 pieces
+  // Step 2: split private key to 5 pieces. 3 random pieces is needed to restore original private key.
   const splitKeys = crypto.splitPrivateKey(privateKey, 3, 5)
 
   // Step 3: restore private key from 3 random parts
